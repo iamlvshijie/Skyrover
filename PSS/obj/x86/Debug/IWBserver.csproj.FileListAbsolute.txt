@@ -1,0 +1,14 @@
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\bin\Debug\IWBserver.exe
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\bin\Debug\IWBserver.pdb
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\obj\x86\Debug\IWBserver.FormMain.resources
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\obj\x86\Debug\IWBserver.Properties.Resources.resources
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\obj\x86\Debug\IWBserver.csproj.GenerateResource.Cache
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\obj\x86\Debug\IWBserver.exe
+c:\users\lab6\documents\visual studio 2010\Projects\IWBserver\IWBserver\obj\x86\Debug\IWBserver.pdb
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\obj\x86\Debug\IWBserver.exe
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\obj\x86\Debug\IWBserver.pdb
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\bin\Debug\IWBserver.exe
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\bin\Debug\IWBserver.pdb
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\obj\x86\Debug\IWBserver.FormMain.resources
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\obj\x86\Debug\IWBserver.Properties.Resources.resources
+C:\Users\Jacob\Desktop\IWBserver\IWBserver\obj\x86\Debug\IWBserver.csproj.GenerateResource.Cache
