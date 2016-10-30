@@ -61,7 +61,7 @@ static void 		IO_Config(void);
 uint8_t txBuffer[TX_PLOAD_WIDTH]={0};
 uint8_t rxBuffer[RX_PLOAD_WIDTH];
 volatile uint8_t rxFlag=0;		
-const uint8_t MyDeviceID = 0x01;
+const uint8_t MyDeviceID = 0x03;
 /* Private functions ---------------------------------------------------------*/
 
 
@@ -82,9 +82,10 @@ int main(void)
 	uint8_t cmd;
 	uint32_t pipe;
 	uint32_t inputWeight;
+	uint8_t PSS_Status = SUCCESS;
 	
 	COM_Config();
-	printf("@Project: PSS Collector by I2T Team\r\n@Email:lvshijie@pku.edu.cn\r\n@Copyright:Skyrover Tech Inc.\r\n");
+	printf("@Project: PSS Collector by I2T Team\r\n@Revision: v1.0.1\r\n@Email:lvshijie@pku.edu.cn\r\n@Copyright:Skyrover Tech Inc.\r\n");
 	
 	printf(">Systick timer initializing ...");
 	if(HAL_Systick_Init()==ERROR)
@@ -149,14 +150,23 @@ int main(void)
 //		printf("txBuffer is %s\r\n", txBuffer);
 //		nRF24L01_TxPacket((uint8_t*)txBuffer);
 		HAL_Systick_Delay(100000);	
-		
+		PSS_Status = SUCCESS;
 		printf(">Device %d: Weight Measured(g): ", MyDeviceID);
 		for(PSS_Index=0;PSS_Index<PSS_N;PSS_Index++)
 		{
 			if(HX711_Get_NetWeight(HX711_0, (TempWeight+PSS_Index))==SUCCESS)
 				printf(" %d ", *(TempWeight+PSS_Index));
 			else
+			{
+				PSS_Status = ERROR;
+				break;
 				printf(" error, ");
+			}
+		}
+		if(PSS_Status == ERROR)
+		{
+			printf("Current HX711 data is error, skipped ... \r\n");
+			continue;
 		}
 		MyWeight = (TempWeight[0]+TempWeight[1]+TempWeight[2])/3;
 		printf(", average weight: %d\r\n",MyWeight);			
